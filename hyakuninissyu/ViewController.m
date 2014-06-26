@@ -181,6 +181,7 @@
     tatami.alpha = 0.0;
 }
 -(IBAction)back{
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self performSegueWithIdentifier:@"kimarijiViewController" sender:self];
+
 }
 @end

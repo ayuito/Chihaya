@@ -94,12 +94,13 @@
                                 </state>
                                 <connections>
                                     <action selector="back2" destination="PVT-ra-WT7" eventType="touchUpInside" id="nd0-Ol-Qdh"/>
+                                    <segue destination="vXZ-lx-hvc" kind="modal" identifier="kimarijiViewController" modalTransitionStyle="crossDissolve" id="dUf-eH-gMw"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kju-sE-gFW">
                                 <rect key="frame" x="19" y="140" width="280" height="287"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.86405256340000003" green="0.85621213600000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -149,10 +150,10 @@
             </objects>
             <point key="canvasLocation" x="660" y="627"/>
         </scene>
-        <!--View Controller-->
+        <!--Simonoku second View Controller-->
         <scene sceneID="iMn-PP-ReB">
             <objects>
-                <viewController id="3i0-zF-4Wn" sceneMemberID="viewController">
+                <viewController id="3i0-zF-4Wn" customClass="simonoku_secondViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3d2-dG-0ki"/>
                         <viewControllerLayoutGuide type="bottom" id="yRV-3b-cZI"/>
@@ -164,8 +165,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="USR-5M-aOQ">
                                 <rect key="frame" x="25" y="89" width="271" height="358"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="backgroundColor" red="1" green="0.95320992959999995" blue="0.93115418719999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -175,17 +175,27 @@
                                 <state key="normal" title="戻る">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="back" destination="3i0-zF-4Wn" eventType="touchUpInside" id="DfA-Og-YzL"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F9C-sw-fcv">
-                                <rect key="frame" x="236" y="502" width="60" height="30"/>
+                                <rect key="frame" x="226" y="501" width="60" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="次の一句">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="next" destination="3i0-zF-4Wn" eventType="touchUpInside" id="iT9-oJ-xoq"/>
+                                    <segue destination="PVT-ra-WT7" kind="modal" identifier="SimonokuViewController" modalTransitionStyle="crossDissolve" id="iJ7-86-fPn"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.95320992959999995" blue="0.93115418719999998" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="syousai" destination="USR-5M-aOQ" id="eb1-fY-bHp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2BE-cj-l4L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -276,6 +286,7 @@
                                 </state>
                                 <connections>
                                     <action selector="back" destination="iSd-nK-9K0" eventType="touchUpInside" id="Dfz-JI-Dbc"/>
+                                    <segue destination="vXZ-lx-hvc" kind="modal" identifier="kousuViewController" modalTransitionStyle="crossDissolve" id="gw4-M4-yd2"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -301,7 +312,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Yzn-Nc-lCb">
                                 <rect key="frame" x="29" y="100" width="262" height="339"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.95320992959999995" blue="0.93115418719999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -311,6 +322,10 @@
                                 <state key="normal" title="次の一句">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="next" destination="CsW-9g-1MV" eventType="touchUpInside" id="hw5-1O-52p"/>
+                                    <segue destination="Djr-G2-5P4" kind="modal" identifier="ViewController" modalTransitionStyle="crossDissolve" id="rvZ-8N-sve"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yyY-30-9Ch">
                                 <rect key="frame" x="38" y="36" width="53" height="30"/>
@@ -360,6 +375,7 @@
                                 </state>
                                 <connections>
                                     <action selector="back" destination="Djr-G2-5P4" eventType="touchUpInside" id="vmP-B3-pHX"/>
+                                    <segue destination="iSd-nK-9K0" kind="modal" identifier="kimarijiViewController" modalTransitionStyle="crossDissolve" id="xB5-aN-Qli"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JB8-TU-ZLB">
@@ -375,7 +391,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5IJ-O1-TED">
                                 <rect key="frame" x="40" y="167" width="240" height="234"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.86405256340000003" green="0.85621213600000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -400,7 +416,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="CsW-9g-1MV" kind="modal" identifier="secondViewController" id="rL0-8X-W5m"/>
+                                    <segue destination="CsW-9g-1MV" kind="modal" identifier="secondViewController" modalTransitionStyle="crossDissolve" id="rL0-8X-W5m"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -421,7 +437,6 @@
     <resources>
         <image name="gosikimaku.jpg" width="397" height="233"/>
         <image name="sakura wahuu.png" width="478" height="920"/>
-        <image name="sakura wahuu.png" width="478" height="920"/>
         <image name="tatami.jpg" width="589" height="452"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -429,4 +444,10 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="rvZ-8N-sve"/>
+        <segue reference="xB5-aN-Qli"/>
+        <segue reference="gw4-M4-yd2"/>
+        <segue reference="Pad-df-6wQ"/>
+    </inferredMetricsTieBreakers>
 </document>

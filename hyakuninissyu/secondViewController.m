@@ -88,4 +88,9 @@
 -(IBAction)back{
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+-(IBAction)next{
+    [self performSegueWithIdentifier:@"ViewController" sender:self];
+
+}
 @end

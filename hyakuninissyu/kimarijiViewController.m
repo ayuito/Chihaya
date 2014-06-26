@@ -66,6 +66,6 @@
 }
 
 -(IBAction)back{
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self performSegueWithIdentifier:@"kousuViewController" sender:self];
 }
 @end
