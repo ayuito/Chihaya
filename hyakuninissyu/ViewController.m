@@ -184,4 +184,6 @@
     [self performSegueWithIdentifier:@"kimarijiViewController" sender:self];
 
 }
+
+// online用!!
 @end
